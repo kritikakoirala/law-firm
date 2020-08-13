@@ -30,9 +30,10 @@ $read_more_button_link = get_theme_mod('read_more_posts_link');
         while ($qry->have_posts()) : $qry->the_post();
 
       ?>
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <?php get_template_part('template-parts/content'); ?>
             <a href="<?php esc_url(the_permalink()); ?>" class="btn know-us-btn"><?php echo "$read_more_button"; ?></a>
+
           </div>
 
         <?php

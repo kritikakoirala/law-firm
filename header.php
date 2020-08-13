@@ -50,8 +50,6 @@
 
     <!-- header middle begins -->
     <div class="header-middle" id="header_middle">
-
-
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-5 col-md-4 col-sm-3">
@@ -75,11 +73,11 @@
 
               if (is_home() || is_front_page()) {
               ?>
-                <h3 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h3>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h1>
               <?php
               } else {
               ?>
-                <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></p>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h1>
               <?php
               }
 
@@ -95,20 +93,20 @@
             </div>
           </div>
 
-          <div class="col-lg-7 col-md-8 col-sm-9">
+          <div class="col-lg-7 col-md-8 col-sm-12">
             <!-- main-nav begins -->
             <nav class="navbar navbar-expand-md mobile-menu">
               <!-- Links -->
-              <?php wp_nav_menu(array(
+              <?php
+              wp_nav_menu(array(
                 'theme_location' => 'kriti_law_firm_main_menu',
                 'menu' => 'kriti_law_firm_main_menu',
                 'menu_class' => 'navbar-nav',
                 'container' => 'ul',
                 'container_class' => 'navbar',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</>'
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
 
               )); ?>
-
 
             </nav>
             <!-- main-nav ends -->
@@ -116,8 +114,7 @@
         </div>
 
         <div id="mobile-menu-wrap"></div>
-
-
       </div>
-      <!-- header middle ends -->
+    </div>
+    <!-- header middle ends -->
   </header>

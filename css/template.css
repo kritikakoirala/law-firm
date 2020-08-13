@@ -16,8 +16,7 @@ body {
   padding: 0;
   margin: 0 auto;
   font-size: 0.9em;
-  font-family: "Lato-Regular" sans-serif;
-  width: 1349px;
+  font-family: "Lato-Regular"sans-serif;
 }
 
 p {
@@ -31,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -38,41 +41,6 @@ h4,
 h5,
 h6 {
   font-family: Merriweather-Regular;
-}
-
-.owl-carousel .owl-nav [class*="owl-"] {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.owl-carousel .owl-nav [class*="owl-"].disabled:hover {
-  background-color: #d6d6d6;
-}
-
-.owl-carousel {
-  position: relative;
-}
-
-.owl-carousel .owl-next,
-.owl-carousel .owl-prev {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  position: absolute;
-  top: 30%;
-  font-size: 20px;
-  color: #fff;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-.owl-carousel .owl-prev {
-  left: -70px;
-}
-
-.owl-carousel .owl-next {
-  right: -70px;
 }
 
 /* header style */
@@ -100,8 +68,28 @@ h6 {
   padding-top: 1em;
 }
 
+.site-brand .site-title {
+  text-transform: uppercase;
+  min-width: 135px;
+  max-width: 135px;
+  width: 100%;
+  letter-spacing: 3px;
+  font-size: 1.4em;
+}
+
+.navbar {
+  display: block;
+}
+
+.header-middle ul {
+  display: flex;
+  flex-direction: row;
+}
+
 .header-middle ul li {
   padding: 20px 20px;
+  list-style: none;
+  display: block;
 }
 
 .header-middle ul li a {
@@ -117,6 +105,10 @@ h6 {
   display: none;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* hero section/landing page */
 
 .hero-section .hero-contents {
@@ -127,9 +119,9 @@ h6 {
   color: #fff;
 }
 
-.hero-contents h1 {
+.hero-contents h2 {
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3em;
   padding-bottom: 20px;
 }
 
@@ -150,13 +142,17 @@ h6 {
 
 /* about section of index page */
 .about-us {
-  margin: 5em;
+  margin: -20px 5em 5em;
 }
 
 .about-us .about_section_image {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
-  width: 360px;
-  height: 400px;
+  max-width: 360px;
+  max-height: 400px;
+  min-height: 200px;
+  min-width: 200px;
+  height: 100%;
+  width: 100%;
 }
 
 .about_section_thumbnail {
@@ -166,17 +162,18 @@ h6 {
 .about_section_thumbnail:before {
   content: "";
   border: 10px solid var(--theme-color);
+  position: absolute;
   top: 40px;
-  right: -50px;
+  right: -30px;
   bottom: -40px;
   left: 40px;
-  position: absolute;
   z-index: -1;
 }
 
 .about-us .about-content {
-  margin-left: 5em;
+  /* margin-left: 5em; */
   margin-top: 4em;
+  padding-left: 5em;
 }
 
 .about-us h3 {
@@ -186,15 +183,15 @@ h6 {
   position: relative;
 }
 
-.about-us h3:before {
+.about-us h3::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid var(--theme-color);
   top: 0;
-  left: 470px;
+  left: 45%;
   right: 0;
   bottom: 0;
-  width: 100px;
+  border-bottom: 2px solid var(--theme-color);
+  width: 90px;
 }
 
 .know-us-btn {
@@ -228,12 +225,12 @@ h6 {
   position: relative;
 }
 
-.section_heading:before {
+.section_heading::after {
   position: absolute;
   content: "";
   border-bottom: 2px solid var(--theme-color);
   top: 0;
-  left: 540px;
+  left: 45%;
   right: 0;
   bottom: 0;
   width: 100px;
@@ -247,6 +244,10 @@ h6 {
 .latest_posts {
   position: relative;
   padding: 1em 0em 4em;
+}
+
+.latest_posts .btn {
+  margin-bottom: 2em;
 }
 
 .post_title {
@@ -275,11 +276,6 @@ h6 {
   color: var(--theme-color);
   font-weight: 600;
   font-size: 1em;
-}
-
-.single-content {
-  border-bottom: 1px solid #c5c4c4;
-  padding: 2em 0;
 }
 
 /* Areas of Practice of homepage */
@@ -344,11 +340,6 @@ h6 {
 
 /* About Page */
 
-.about_header_image {
-  background-color: rgba(0, 0, 0, 0.8);
-  margin: 0 0 4em 0;
-}
-
 .about_banner {
   width: 100%;
   height: 400px;
@@ -381,7 +372,7 @@ h6 {
 }
 
 .tmm {
-  margin-top: 7em !important;
+  margin-top: 3em !important;
 }
 
 .about-us h5 {
@@ -421,26 +412,60 @@ h6 {
 .contact_form {
   margin-top: 7em;
   padding: 1em;
+
 }
 
 .contact_form h4 {
   position: relative;
   padding-bottom: 0.6em;
   margin-bottom: 1.1em;
+
 }
+
 
 .contact_form h4::after {
   position: absolute;
   content: "";
   top: 0;
   bottom: 0;
-  left: 45%;
+  left: 0;
   right: 0;
   border-bottom: 2px solid var(--theme-color);
   width: 120px;
 }
 
-.contact_form .btn {
+.contact iframe {
+  min-width: 300px;
+  height: 450px;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 450px;
+}
+
+.wpcf7 {
+  padding-top: 1em;
+}
+
+.wpcf7 label {
+  font-family: Merriweather-Regular;
+  letter-spacing: 0.8px;
+  color: #495057;
+}
+
+.wpcf7-form-control-wrap input {
+  height: calc(1.5em + 0.75rem + 2px);
+}
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  width: 200%;
+}
+
+.wpcf7-submit {
   background-color: var(--theme-color);
   border: 0;
   color: #fff;
@@ -448,6 +473,9 @@ h6 {
   letter-spacing: 0.06em;
   font-weight: 600;
   font-size: 1em;
+  padding: 10px 50px;
+  border-radius: 1em;
+  letter-spacing: 2px;
 }
 
 /* Widget Area */
@@ -555,6 +583,7 @@ h6 {
 }
 
 /* media screen */
+
 @media screen and (max-width: 992px) {
   .header-middle .firm-logo {
     padding-left: 4em;
@@ -565,18 +594,77 @@ h6 {
   }
 
   .header-middle ul li a {
-    font-size: 0.86em;
+    font-size: 1em;
     text-transform: uppercase;
     font-family: Merrriweather-BlackItalic;
     letter-spacing: 0.1em;
     font-weight: 500;
   }
+
+  .about_section_thumbnail:before {
+    content: "";
+    border: 10px solid var(--theme-color);
+    top: 40px;
+    right: -50px;
+    bottom: -40px;
+    left: 40px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .contact iframe {
+    padding-top: 2em;
+  }
+
+  .section_heading::after {
+    left: 43%;
+  }
+
+  .about-us h3::after {
+    left: 43%;
+  }
+
+  .about-us h5:after {
+    left: 44%;
+  }
+
+  .widget {
+    padding: 0em 0em 1em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header-middle .firm-logo {
+    padding-left: 2em;
+  }
+
+  .header-middle .site-brand {
+    padding-left: 2em;
+    padding-top: 1em;
+  }
+
+  .areas_of_practice {
+    margin: 10em 0em 3em 0em;
+    padding: 3em 5em;
+    background-color: #222225;
+    color: #fff;
+  }
+
+  .navbar {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .header-middle .firm-logo {
-    padding-left: 2em;
-    padding-bottom: 5px;
+
+  .hero-contents h2 {
+    text-transform: uppercase;
+    font-size: 2.3em;
+    padding-bottom: 20px;
+  }
+
+  .hero-contents p {
+    font-size: 0.9em;
   }
 
   .navbar {
@@ -587,7 +675,8 @@ h6 {
     display: block;
     background: transparent !important;
     text-align: center;
-    margin-top: -60px;
+    margin-top: -50px;
+
   }
 
   .slicknav_nav {
@@ -597,6 +686,8 @@ h6 {
   .slicknav_nav ul {
     margin: 0;
     text-align: left;
+    display: flex;
+    flex-direction: column;
   }
 
   .slicknav_nav a,
@@ -612,7 +703,7 @@ h6 {
     border-radius: 0;
     background-color: var(--theme-color);
     display: inline-block;
-    right: -16px;
+    right: 2em;
   }
 
   .slicknav_nav .slicknav_row,
@@ -622,13 +713,169 @@ h6 {
 
   .slicknav_nav a:hover {
     border-radius: 0;
-    background: #e7ab3c;
+    background: var(--theme-color);
     color: #fff;
   }
 
   .slicknav_nav .slicknav_row:hover {
     border-radius: 0;
-    background: #e7ab3c;
+    background: var(--theme-color);
     color: #fff;
+  }
+
+  .header-middle .firm-logo {
+    padding-left: 2em;
+    padding-bottom: 5px;
+  }
+
+  .header-middle .site-title {
+    font-size: 1.4em;
+  }
+
+  .about-us {
+    margin: -20px 2em 5em 0;
+  }
+
+  .about-us .about-content {
+    margin-left: -3em;
+    margin-top: 4em;
+    text-align: center;
+  }
+
+
+
+  .about_section_thumbnail:before {
+    content: "";
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .wpcf7-form-control-wrap input,
+  .wpcf7-form-control-wrap textarea {
+    padding: 0.5em 0.5em;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    width: 150%;
+  }
+
+  .section_heading::after {
+    left: 43%;
+  }
+
+  .about-us h3::after {
+    left: 40%;
+  }
+
+  .about-us h5:after {
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .site-brand .site-title {
+    font-size: 1.3em;
+  }
+
+  .hero-contents h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-bottom: 20px;
+  }
+
+  .hero-contents p {
+    font-size: 0.8em;
+  }
+
+  .areas_of_practice {
+    margin: 10em 0em 3em 0em;
+    padding: 3em 1em;
+    background-color: #222225;
+    color: #fff;
+  }
+
+  .about-us {
+    margin: -20px 3em 5em;
+  }
+
+
+  .about-us .about-content {
+    margin-left: -5em;
+    margin-top: 4em;
+  }
+
+  .about_section_thumbnail:before {
+    content: "";
+    border: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+  }
+
+  .about-us h3,
+  .latest_posts h3 {
+    font-size: 1.5em;
+  }
+
+  .about-us h3::after {
+    left: 40%;
+    width: 20%;
+  }
+
+  .latest_posts h3::after {
+    left: 40%;
+    width: 20%;
+  }
+
+  .wpcf7-form-control-wrap input,
+  .wpcf7-form-control-wrap textarea {
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    min-width: 50%;
+    max-width: 100%;
+  }
+
+  .footer {
+    padding-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+
+  .site-brand {
+    padding-left: 0 !important;
+  }
+
+  .site-title {
+    font-size: 1em !important;
+  }
+
+  .slicknav_menu .slicknav_menutxt {
+    font-size: 0.9em;
+  }
+
+  .slicknav_btn {
+    right: 0;
+  }
+
+  .hero-contents p {
+    padding: 0 10px;
+  }
+
+  .hero-contents .btn {
+    background-color: var(--theme-color);
+    width: 140px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
   }
 }

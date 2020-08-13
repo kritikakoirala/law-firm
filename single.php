@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 <!-- blog posts section begins -->
-<div class="latest_posts owl-carousel owl-theme">
+<div class="latest_posts">
     <div class="container">
         <div class="row">
 
@@ -16,10 +16,12 @@ get_header(); ?>
                 while (have_posts()) : the_post();
 
             ?>
-                    <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="col-lg-8 col-md-12 order-md-1 col-sm-12">
                         <?php get_template_part('template-parts/content', 'single'); ?>
+                        <hr>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <div class="col-lg-4 col-md-6 order-md-2 col-sm-6">
                         <?php get_sidebar(); ?>
                     </div>
                 <?php

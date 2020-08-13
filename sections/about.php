@@ -10,12 +10,12 @@ $read_more_button_link = get_theme_mod('read_more_button_link');
 ?>
 <section class="about-us">
   <h3 class="pt-4 text-center"><?php echo $title_text; ?></h3>
-  <div class="container">
+  <div class="container-fluid">
 
     <div class="row">
 
       <!-- about section image -->
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
         <?php
         $args = array(
           'post_type' => 'page',
@@ -37,7 +37,7 @@ $read_more_button_link = get_theme_mod('read_more_button_link');
 
             if (has_post_thumbnail()) {
             ?>
-              <img data-original="<?php the_post_thumbnail_url(); ?>" class="about_section_image" alt="about us image" src="<?php the_post_thumbnail_url(); ?>" style="">
+              <img data-original="<?php the_post_thumbnail_url(); ?>" class="about_section_image img_fluid" alt="about us image" src="<?php the_post_thumbnail_url(); ?>" style="">
 
             <?php
             }
@@ -47,7 +47,7 @@ $read_more_button_link = get_theme_mod('read_more_button_link');
 
       </div>
       <!-- about section contents -->
-      <div class="col-lg-6">
+      <div class="col-lg-8 col-md-6 col-sm-12">
         <div class="about-content">
 
 

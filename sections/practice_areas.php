@@ -26,7 +26,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
         <p><?php echo $section_description; ?></p>
         <div class="area_section text-center">
           <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center align-self-stretch">
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center align-self-stretch">
               <div class="icon active d-flex justify-content-center align-items-center mb-2">
                 <i class="fa fa-balance-scale"></i>
 
@@ -37,7 +37,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center align-self-stretch">
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center align-self-stretch">
               <div class="icon active d-flex justify-content-center align-items-center mb-2">
                 <i class="fa fa-balance-scale"></i>
 
@@ -48,7 +48,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center align-self-stretch">
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center align-self-stretch">
               <div class="icon active d-flex justify-content-center align-items-center mb-2">
                 <i class="fa fa-balance-scale"></i>
 
@@ -59,7 +59,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center align-self-stretch">
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center align-self-stretch">
               <div class="icon active d-flex justify-content-center align-items-center mb-2">
                 <i class="fa fa-balance-scale"></i>
 
@@ -71,7 +71,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
             </div>
 
           </div>
-          <a class="btn readmore text-center" href="<?php echo $readmore_link ?>"><?php echo $readmore; ?></a>
+
         </div>
 
 

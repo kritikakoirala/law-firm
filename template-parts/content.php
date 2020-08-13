@@ -1,6 +1,6 @@
 <!-- This is the content of the post -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <h4 class="post_title"><a href="<?php echo esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h4>
+    <h4 class="post_title mt-4"><a href="<?php echo esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h4>
     <?php
     if (!is_page()) {
     ?>

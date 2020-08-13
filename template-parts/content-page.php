@@ -1,6 +1,6 @@
 <!-- This is the content of the post -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <h4 class="post_title"><?php the_title(); ?></h4>
+    <h4 class="post_title mt-4"><?php the_title(); ?></h4>
     <?php
     if (!is_page()) {
     ?>

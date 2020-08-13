@@ -8,9 +8,9 @@
 
 // Contact Details widget
 $contact_widget_title = get_theme_mod('contact_widget_title');
-$contact_number = get_theme_mod('phone_number');
-$email = get_theme_mod('email');
-$address = get_theme_mod('address');
+$contact_number = get_theme_mod('footer_phone_number');
+$email = get_theme_mod('footer_email');
+$address = get_theme_mod('footer_address');
 
 // Opening Hours widget
 $opening_hours_title = get_theme_mod('opening_hours_title');
@@ -25,7 +25,7 @@ $copyright_message = get_theme_mod('copyright_message');
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4">
+			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="widget widget_1">
 					<div class="contact_info">
 						<h5><?php echo $contact_widget_title; ?></h5>
@@ -38,19 +38,19 @@ $copyright_message = get_theme_mod('copyright_message');
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-4 col-sm-4">
+			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="widget widget_2">
 					<div class="footer_menu">
 						<h5>Recent Posts</h5>
 						<!-- main-nav begins -->
-						<nav class="navbar navbar-expand-md mobile-menu">
+						<nav class="navbar-ul">
 							<!-- Links -->
 							<?php wp_nav_menu(array(
 								'theme_location' => 'kriti_law_firm_footer_menu',
 								'menu' => 'kriti_law_firm_footer_menu',
 								'menu_class' => 'navbar-nav',
 								'container' => 'ul',
-								'container_class' => 'navbar',
+								'container_class' => 'navbar-ul',
 								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</>'
 
 							)); ?>
@@ -62,7 +62,7 @@ $copyright_message = get_theme_mod('copyright_message');
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-4 col-sm-4">
+			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="widget widget_3">
 					<div class="office_hours">
 						<h5><?php echo $opening_hours_title; ?></h5>
