@@ -82,6 +82,10 @@ function law_firm_config()
 	// Add theme support for selective refresh for widgets.
 	add_theme_support('customize-selective-refresh-widgets');
 
+
+	// Add custom image size
+	add_image_size('search-thumbnail', 220, 200, false);
+
 	/**
 	 * Add support for core custom logo.
 	 *

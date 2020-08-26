@@ -31,6 +31,30 @@ function custom_functions()
             height: 400px;
             position: relative;
         }
+
+        .service-banner .banner-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url("<?php echo get_the_post_thumbnail_url(); ?>");
+            margin: 0 0 4em 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
+
+        .team-banner .banner-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url("<?php echo get_the_post_thumbnail_url(); ?>");
+            margin: 0 0 4em 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
     </style>
 <?php
 }

@@ -52,7 +52,7 @@
     <div class="header-middle" id="header_middle">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-5 col-md-4 col-sm-3">
+          <div class="col-lg-3 col-md-4 col-sm-3">
             <!-- firm_logo -->
             <div class="firm-logo">
 
@@ -67,7 +67,7 @@
 
 
             <!-- site title and site description -->
-            <div class="site-brand">
+            <div class="site-brand d-flex justify-content-sm-center">
 
               <?php
 
@@ -93,7 +93,7 @@
             </div>
           </div>
 
-          <div class="col-lg-7 col-md-8 col-sm-12">
+          <div class="col-lg-9 col-md-9 col-sm-9 d-flex justify-content-center">
             <!-- main-nav begins -->
             <nav class="navbar navbar-expand-md mobile-menu">
               <!-- Links -->

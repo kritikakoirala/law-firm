@@ -26,7 +26,7 @@ $copyright_message = get_theme_mod('copyright_message');
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="widget widget_1">
+				<div class="widgets widget_1">
 					<div class="contact_info">
 						<h5><?php echo $contact_widget_title; ?></h5>
 						<ul class="list-group">
@@ -63,7 +63,7 @@ $copyright_message = get_theme_mod('copyright_message');
 			</div>
 
 			<div class="col-lg-4 col-md-6 col-sm-12">
-				<div class="widget widget_3">
+				<div class="widgets widget_3">
 					<div class="office_hours">
 						<h5><?php echo $opening_hours_title; ?></h5>
 						<ul class="list-group">

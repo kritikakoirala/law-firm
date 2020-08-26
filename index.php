@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="latest_posts">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 order-md-1 col-md-12 col-sm-12 ">
+      <div class="col-lg-9 order-md-1 col-md-12 col-sm-12 ">
         <?php
         // if there are any posts
         if (have_posts()) :
@@ -19,18 +19,33 @@ get_header(); ?>
             <?php get_template_part('template-parts/content'); ?>
             <hr>
             </hr>
+
           <?php
           endwhile;
-        else :
           ?>
+          <nav class="paging-navigation" role="navigation">
+            <div class="nav-links">
+              <?php if (get_next_posts_link()) : ?>
+                <div class="nav-previous"><?php next_posts_link(__('<span class = "meta-nav">&larr;</span> Older Posts', 'kriti_law_firm')) ?></div>
+              <?php endif; ?>
+
+              <?php if (get_previous_posts_link()) : ?>
+                <div class="nav-next"><?php previous_posts_link(__('<span class = "meta-nav">&rarr;</span> Newer Posts', 'kriti_law_firm')) ?></div>
+              <?php endif; ?>
+            </div>
+          </nav>
+        <?php
+        else :
+        ?>
           <p>There are no posts yet.</p>
 
         <?php
         endif;
         ?>
+
       </div>
 
-      <div class="col-lg-4 order-md-2 col-md-6 col-sm-6">
+      <div class="col-lg-3 order-md-2 col-md-6 col-sm-6">
         <?php get_sidebar(); ?>
       </div>
 

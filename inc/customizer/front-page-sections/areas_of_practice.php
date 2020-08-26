@@ -63,6 +63,30 @@ function law_firm_areas_of_practice_section($wp_customize)
     )
   );
 
+  $wp_customize->add_setting(
+    'area_section_image',
+    array(
+      'priority' => 35,
+      'type' => 'theme_mod',
+      'capability' => 'edit_theme_options',
+      'transport' => 'refresh'
+
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'area_section_image',
+      array(
+        'label' => __('Upload the Practice Area Image', 'kriti_law_firm'),
+        'settings' => 'area_section_image',
+        'section' => 'practice_section'
+      )
+    )
+
+  );
+
   // Practice 1
   $wp_customize->add_setting(
     'practice_area_1',
@@ -84,6 +108,24 @@ function law_firm_areas_of_practice_section($wp_customize)
     )
   );
 
+  $wp_customize->add_setting(
+    'practice_area_1_link',
+    array(
+      'default' => '#',
+      'sanitize_callback' => 'esc_url_raw',
+    )
+  );
+
+  $wp_customize->add_control(
+    'practice_area_1_link',
+    array(
+      'label' => __('Practice Area 1 Link', 'kriti_law_firm'),
+      'section' => 'practice_section',
+      'settings' => 'practice_area_1_link',
+      'type' => 'text'
+    )
+  );
+
   // Practice 2
   $wp_customize->add_setting(
     'practice_area_2',
@@ -101,6 +143,23 @@ function law_firm_areas_of_practice_section($wp_customize)
       'label' => __('Practice Area Title 2', 'kriti_law_firm'),
       'settings' => 'practice_area_2',
       'section' => 'practice_section',
+      'type' => 'text'
+    )
+  );
+  $wp_customize->add_setting(
+    'practice_area_2_link',
+    array(
+      'default' => '#',
+      'sanitize_callback' => 'esc_url_raw',
+    )
+  );
+
+  $wp_customize->add_control(
+    'practice_area_2_link',
+    array(
+      'label' => __('Practice Area 2 Link', 'kriti_law_firm'),
+      'section' => 'practice_section',
+      'settings' => 'practice_area_2_link',
       'type' => 'text'
     )
   );
@@ -126,6 +185,23 @@ function law_firm_areas_of_practice_section($wp_customize)
     )
   );
 
+  $wp_customize->add_setting(
+    'practice_area_3_link',
+    array(
+      'default' => '#',
+      'sanitize_callback' => 'esc_url_raw',
+    )
+  );
+
+  $wp_customize->add_control(
+    'practice_area_3_link',
+    array(
+      'label' => __('Practice Area 3 Link', 'kriti_law_firm'),
+      'section' => 'practice_section',
+      'settings' => 'practice_area_3_link',
+      'type' => 'text'
+    )
+  );
   // Practice 4
   $wp_customize->add_setting(
     'practice_area_4',
@@ -143,6 +219,23 @@ function law_firm_areas_of_practice_section($wp_customize)
       'label' => __('Practice Area Title 4', 'kriti_law_firm'),
       'settings' => 'practice_area_4',
       'section' => 'practice_section',
+      'type' => 'text'
+    )
+  );
+  $wp_customize->add_setting(
+    'practice_area_4_link',
+    array(
+      'default' => '#',
+      'sanitize_callback' => 'esc_url_raw',
+    )
+  );
+
+  $wp_customize->add_control(
+    'practice_area_4_link',
+    array(
+      'label' => __('Practice Area 4 Link', 'kriti_law_firm'),
+      'section' => 'practice_section',
+      'settings' => 'practice_area_4_link',
       'type' => 'text'
     )
   );

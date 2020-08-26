@@ -9,19 +9,24 @@
 
 $section_title = get_theme_mod('area_section_title');
 $section_description = get_theme_mod('area_section_description');
+$image = get_theme_mod('area_section_image');
 $area_1 = get_theme_mod('practice_area_1');
 $area_2 = get_theme_mod('practice_area_2');
 $area_3 = get_theme_mod('practice_area_3');
 $area_4 = get_theme_mod('practice_area_4');
-$readmore = get_theme_mod('read_more');
-$readmore_link = get_theme_mod('read_more_button_link');
-
+$practice_area_1_link = get_theme_mod('practice_area_1_link');
+$practice_area_2_link = get_theme_mod('practice_area_2_link');
+$practice_area_3_link = get_theme_mod('practice_area_3_link');
+$practice_area_4_link = get_theme_mod('practice_area_4_link');
 ?>
 
 <section class="areas_of_practice">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <img src="<?php echo $image ?>" alt="Practice section Image" class="practice_area_img">
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
         <h5 class="text-center mb-4"><?php echo $section_title ?></h5>
         <p><?php echo $section_description; ?></p>
         <div class="area_section text-center">
@@ -32,7 +37,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
 
               </div>
               <div class="service-body">
-                <h6 class="heading text-center"><?php echo $area_1; ?></h6>
+                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_1_link); ?>"><?php echo $area_1; ?></a></h6>
 
               </div>
             </div>
@@ -43,7 +48,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
 
               </div>
               <div class="service-body">
-                <h6 class="heading text-center"><?php echo $area_2; ?></h6>
+                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_2_link); ?>"><?php echo $area_2; ?></a></h6>
 
               </div>
             </div>
@@ -54,7 +59,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
 
               </div>
               <div class="service-body">
-                <h6 class="heading text-center"><?php echo $area_3; ?></h6>
+                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_3_link); ?>"><?php echo $area_3; ?></a></h6>
 
               </div>
             </div>
@@ -65,7 +70,7 @@ $readmore_link = get_theme_mod('read_more_button_link');
 
               </div>
               <div class="service-body">
-                <h6 class="heading text-center"><?php echo $area_4; ?></h6>
+                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_4_link); ?>"><?php echo $area_4; ?></a></h6>
 
               </div>
             </div>
