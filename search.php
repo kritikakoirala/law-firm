@@ -8,34 +8,33 @@
 
 get_header(); ?>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-
-      <header class="search-header">
-        <?php if (have_posts()) : ?>
-          <h1 class="page-title">
-            <?php
-            /* translators: Search query. */
-            printf(__('Search Results for: %s', 'kriti_law_firm'), '<span>' . get_search_query() . '</span>');
-            ?>
-          </h1>
-        <?php else : ?>
-          <h1 class="page-title"><?php _e('Nothing Found', 'kriti_law_firm'); ?></h1>
+<div class="search">
 
 
-          <?php
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+
+        <header class="search-header">
+          <?php if (have_posts()) : ?>
+            <h1 class="page-title">
+              <?php
+              /* translators: Search query. */
+              printf(__('Search Results for: %s', 'kriti_law_firm'), '<span>' . get_search_query() . '</span>');
+              ?>
+            </h1>
+          <?php else : ?>
+            <h1 class="page-title"><?php _e('Nothing Found', 'kriti_law_firm'); ?></h1>
+
+
+          <?php endif;
           get_search_form();
           ?>
-          <!-- Search Pagination -->
-
-        <?php endif;
-        ?>
-      </header><!-- .page-header -->
+        </header><!-- .page-header -->
+      </div>
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -80,7 +79,7 @@ get_header(); ?>
             <?php
 
             endif;
-            get_search_form();
+
             ?>
           </div>
         </div>

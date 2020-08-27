@@ -31,9 +31,19 @@ $read_more_button_link = get_theme_mod('read_more_posts_link');
 
       ?>
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <?php get_template_part('template-parts/content'); ?>
-            <a href="<?php esc_url(the_permalink()); ?>" class="btn know-us-btn"><?php echo "$read_more_button"; ?></a>
+            <div class="card">
 
+              <div class="card-body">
+
+
+                <?php get_template_part('template-parts/content'); ?>
+              </div>
+              <div class="card-footer">
+
+
+                <a href="<?php esc_url(the_permalink()); ?>" class="btn"><?php echo "$read_more_button"; ?></a>
+              </div>
+            </div>
           </div>
 
         <?php

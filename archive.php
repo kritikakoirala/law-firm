@@ -9,7 +9,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-8 col-md-12 order-md-1 col-sm-12">
+            <div class="col-lg-9 col-md-12 order-md-1 col-sm-12">
                 <?php
                 // if there are any posts
                 if (have_posts()) :
@@ -29,7 +29,7 @@ get_header(); ?>
                 endif;
                 ?>
             </div>
-            <div class="col-lg-4 col-md-6 order-md-2  col-sm-6">
+            <div class="col-lg-3 col-md-6 order-md-2  col-sm-6">
                 <?php get_sidebar(); ?>
             </div>
 

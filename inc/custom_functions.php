@@ -16,7 +16,7 @@ function custom_functions()
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 540px;
+            height: 510px;
             position: relative;
         }
 
@@ -32,7 +32,7 @@ function custom_functions()
             position: relative;
         }
 
-        .service-banner .banner-content {
+        .service-banner {
             background-color: rgba(0, 0, 0, 0.8);
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
                 url("<?php echo get_the_post_thumbnail_url(); ?>");
@@ -44,7 +44,7 @@ function custom_functions()
             position: relative;
         }
 
-        .team-banner .banner-content {
+        .team-banner {
             background-color: rgba(0, 0, 0, 0.8);
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
                 url("<?php echo get_the_post_thumbnail_url(); ?>");

@@ -38,7 +38,6 @@ $read_more_button_link = get_theme_mod('read_more_button_link');
             if (has_post_thumbnail()) {
             ?>
               <img data-original="<?php the_post_thumbnail_url(); ?>" class="about_section_image img_fluid" alt="about us image" src="<?php the_post_thumbnail_url(); ?>" style="">
-
             <?php
             }
             ?>

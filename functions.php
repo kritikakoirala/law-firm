@@ -115,7 +115,7 @@ function excerpt_length($length)
 		return $length;
 	}
 	// set excerpt lenth to 50
-	return 50;
+	return 30;
 }
 add_filter('excerpt_length', 'excerpt_length', '999');
 
@@ -133,3 +133,4 @@ add_filter('excerpt_more', 'excerpt_text', 999);
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/custom_functions.php';
 require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/template_functions.php';

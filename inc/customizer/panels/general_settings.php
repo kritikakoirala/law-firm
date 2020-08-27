@@ -14,7 +14,7 @@ function general_settings_panel($wp_customize)
     $wp_customize->add_panel(
         'general_settings',
         array(
-            'title' => __('General Settings Panel', 'kriti_law_firm'),
+            'title' => __('General Settings', 'kriti_law_firm'),
             'priority' => 100,
             'capability' => 'edit_theme_options',
             'description' => __('Allows you to change the general settings around the website', 'kriti_law_firm')
@@ -22,4 +22,4 @@ function general_settings_panel($wp_customize)
         )
     );
 }
-add_action('customize_register', 'about_page_panel');
+add_action('customize_register', 'general_settings_panel');

@@ -11,6 +11,7 @@ require get_template_directory() . '/inc/customizer/panels/footer.php';
 require get_template_directory() . '/inc/customizer/panels/front_page.php';
 require get_template_directory() . '/inc/customizer/panels/about_page.php';
 require get_template_directory() . '/inc/customizer/panels/contact_page.php';
+require get_template_directory() . '/inc/customizer/panels/general_settings.php';
 
 
 /* ================== Include the sections ==================== */
@@ -32,3 +33,5 @@ require get_template_directory() . '/inc/customizer/about_page_sections.php';
 
 // Contact Page Sections
 require get_template_directory() . '/inc/customizer/contact_page_sections.php';
+
+require get_template_directory() . '/inc/customizer/general-setting-section/posts_and_page_section.php';

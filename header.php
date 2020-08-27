@@ -67,10 +67,8 @@
 
 
             <!-- site title and site description -->
-            <div class="site-brand d-flex justify-content-sm-center">
-
+            <div class="site-brand ">
               <?php
-
               if (is_home() || is_front_page()) {
               ?>
                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h1>

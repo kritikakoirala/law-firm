@@ -16,10 +16,10 @@ get_header(); ?>
                 while (have_posts()) : the_post();
 
             ?>
-                    <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
                         <?php get_template_part('template-parts/content', 'page'); ?>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <?php get_sidebar(); ?>
                     </div>
                 <?php

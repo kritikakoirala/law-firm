@@ -31,4 +31,10 @@ jQuery(function ($) {
     iclass.setAttribute("class", "fa fa-angle-right");
     getUl.prepend(iclass);
   });
+
+  $(document).ready(function () {
+    $(".slicknav_menu .slicknav_icon").click(function () {
+      $(this).toggleClass("open");
+    });
+  });
 });

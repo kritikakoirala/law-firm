@@ -16,13 +16,15 @@ get_header(); ?>
                 while (have_posts()) : the_post();
 
             ?>
-                    <div class="col-lg-8 col-md-12 order-md-1 col-sm-12">
+
+                    <div class="col-lg-9 col-md-12 order-md-1 col-sm-12">
                         <?php get_template_part('template-parts/content', 'single'); ?>
                         <hr>
 
+                        <?php show_related_posts(); ?>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 order-md-2 col-sm-6">
+                    <div class="col-lg-3 col-md-6 order-md-2 col-sm-6">
                         <?php get_sidebar(); ?>
                     </div>
                 <?php
