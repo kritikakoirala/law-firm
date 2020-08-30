@@ -24,7 +24,7 @@ get_header(); ?>
               ?>
             </h1>
           <?php else : ?>
-            <h1 class="page-title"><?php _e('Nothing Found', 'kriti_law_firm'); ?></h1>
+            <h1 class="page-title"><?php esc_html_e('Nothing Found', 'kriti_law_firm'); ?></h1>
 
 
           <?php endif;
@@ -75,7 +75,7 @@ get_header(); ?>
             else :
               ?>
 
-              <p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kriti_law_firm'); ?></p>
+              <p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kriti_law_firm'); ?></p>
             <?php
 
             endif;

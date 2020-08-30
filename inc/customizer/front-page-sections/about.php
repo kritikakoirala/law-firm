@@ -27,7 +27,8 @@ function law_firm_about_section($wp_customize)
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
-      'default' => __('Our story', 'kriti_law_firm')
+      'default' => __('Our story', 'kriti_law_firm'),
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -50,7 +51,8 @@ function law_firm_about_section($wp_customize)
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
-      'default' => __('Know Us', 'kriti_law_firm')
+      'default' => __('Know Us', 'kriti_law_firm'),
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -73,7 +75,8 @@ function law_firm_about_section($wp_customize)
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
       'default' => __('#', 'kriti_law_firm'),
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
+
     )
   );
 

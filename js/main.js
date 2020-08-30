@@ -32,9 +32,19 @@ jQuery(function ($) {
     getUl.prepend(iclass);
   });
 
-  $(document).ready(function () {
-    $(".slicknav_menu .slicknav_icon").click(function () {
-      $(this).toggleClass("open");
-    });
-  });
+  // menu icon on mobile view
+  // window.onscroll = function () {
+  //   scrollFunction();
+  // };
+
+  // function scrollFunction() {
+  //   if (
+  //     document.body.scrollTop > 50 ||
+  //     document.documentElement.scrollTop > 50
+  //   ) {
+  //     document.getElementById("header").style.fontSize = "0.97em";
+  //   } else {
+  //     document.getElementById("header").style.fontSize = "1em";
+  //   }
+  // }
 });

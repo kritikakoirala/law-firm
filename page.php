@@ -26,7 +26,7 @@ get_header(); ?>
                 endwhile;
             else :
                 ?>
-                <p>There are no posts yet.</p>
+                <p><?php get_template_part('template-parts/content', 'none') ?></p>
             <?php
             endif;
             ?>

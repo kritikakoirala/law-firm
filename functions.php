@@ -7,7 +7,97 @@ This functions page includes all the basic things we need in the website
 
 // function to load the stylesheet and scripts
 
-use function PHPSTORM_META\map;
+
+if (!function_exists('kriti_law_firm_setup')) :
+
+	function kriti_law_firm_setup()
+	{
+
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+
+		add_theme_support('title-tag');
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+
+		add_theme_support('post-thumbnails');
+
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus(
+			array(
+				'kriti_law_firm_main_menu' => __('Main Menu', 'kriti_law_firm'),
+				'kriti_law_firm_footer_menu' => __('Footer Menu', 'kriti_law_firm')
+			)
+		);
+
+		/*
+		* Switch default core markup for search form, comment form, and comments
+	 	* to output valid HTML5.
+	 	*/
+		add_theme_support('html5', array(
+			'comment-list',
+			'gallery',
+			'caption',
+		));
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support('custom-logo', array(
+			'height'      => 70,
+			'width'       => 70,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array('site-title', 'site-description')
+		));
+
+
+		// Add theme support for customer header
+		$defaults = array(
+			'default-image' => get_template_directory_uri() . '/img/about_img.jpg',
+			'width' => 1349,
+			'height' => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'default-text-color' => '',
+			'header-text' => true,
+			'admin-preview-callback' => '',
+			'uploads' => true
+		);
+		add_theme_support('custom-header', $defaults);
+
+
+		// Add support for responsive embedded content.
+		add_theme_support('responsive-embeds');
+
+
+		// Add theme support for post formats
+		add_theme_support('post-formats', array('video, image'));
+
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support('customize-selective-refresh-widgets');
+
+		// Add support for full and wide align images.
+		add_theme_support('align-wide');
+
+		// Add custom image size
+		add_image_size('search-thumbnail', 220, 200, false);
+	}
+
+endif;
+add_filter('after_setup_theme', 'kriti_law_firm_setup');
+
 
 function load_script()
 {
@@ -33,74 +123,6 @@ function load_script()
 }
 
 add_action('wp_enqueue_scripts', 'load_script');
-
-
-// all the configuration of the site
-function law_firm_config()
-{
-	//register menu
-	register_nav_menus(
-		array(
-			'kriti_law_firm_main_menu' => __('Main Menu', 'kriti_law_firm'),
-			'kriti_law_firm_footer_menu' => __('Footer Menu', 'kriti_law_firm')
-		)
-	);
-
-	// add theme support for the site
-
-
-	// theme support for customer header
-	$defaults = array(
-		'default-image' => get_template_directory_uri() . '/img/about_img.jpg',
-		'width' => 1349,
-		'height' => 400,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'default-text-color' => '',
-		'header-text' => true,
-		'admin-preview-callback' => '',
-		'uploads' => true
-	);
-	add_theme_support('custom-header', $defaults);
-
-	// theme support for post thumbnail
-	add_theme_support('post-thumbnails');
-
-	// theme support for post formats
-	add_theme_support('post-formats', array('video, image'));
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support('html5', array(
-		'comment-list',
-		'gallery',
-		'caption',
-	));
-
-	// Add theme support for selective refresh for widgets.
-	add_theme_support('customize-selective-refresh-widgets');
-
-
-	// Add custom image size
-	add_image_size('search-thumbnail', 220, 200, false);
-
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support('custom-logo', array(
-		'height'      => 70,
-		'width'       => 70,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array('site-title', 'site-description')
-	));
-}
-
-add_action('after_setup_theme', 'law_firm_config', 0);
 
 /**
  * function for excerpts

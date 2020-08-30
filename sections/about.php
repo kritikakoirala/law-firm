@@ -9,7 +9,7 @@ $read_more_button = get_theme_mod('read_more_button');
 $read_more_button_link = get_theme_mod('read_more_button_link');
 ?>
 <section class="about-us">
-  <h3 class="pt-4 text-center"><?php echo $title_text; ?></h3>
+  <h3 class="pt-4 text-center"><?php echo esc_html($title_text); ?></h3>
   <div class="container-fluid">
 
     <div class="row">
@@ -54,13 +54,13 @@ $read_more_button_link = get_theme_mod('read_more_button_link');
           <p class="text-left mt-4">
           <?php
 
-          echo the_excerpt();
+          the_excerpt();
         }
 
           ?>
 
           </p>
-          <a href="<?php esc_url(the_permalink()); ?>" class="btn know-us-btn"><?php echo $read_more_button; ?></a>
+          <a href="<?php the_permalink(); ?>" class="btn know-us-btn"><?php echo esc_html($read_more_button); ?></a>
         </div>
       </div>
     </div>

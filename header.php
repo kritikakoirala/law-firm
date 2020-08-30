@@ -5,17 +5,18 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kriti Law Firm</title>
   <?php wp_head(); ?>
-
-
 </head>
 
 <body class="<?php body_class(); ?>">
-  <?php wp_body_open(); ?>
+  <?php wp_body_open();
 
+  //  Get all the theme mods 
 
-  <header class="header">
+  $header_phone  = get_theme_mod('header_phone');
+  $header_email = get_theme_mod('header_email');
+  ?>
+  <header class="header" id="header">
     <!-- top header for contact info -->
     <div class="header-top text-right">
       <div class="container">
@@ -27,15 +28,13 @@
               <li class="nav-item py-2">
                 <a class="nav-phonenumber mr-4"><i class="fa fa-phone"></i>
                   <?php
-                  if (get_theme_mod('header_phone'))
-                    echo esc_html_e(get_theme_mod('header_phone'));
+                  echo esc_html($header_phone);
                   ?>
                 </a>
 
                 <a class="nav-email ml-4"><i class="fa fa-envelope"></i>
                   <?php
-                  if (get_theme_mod('header_email'))
-                    echo esc_html_e(get_theme_mod('header_email'));
+                  echo esc_html($header_email);
                   ?>
                 </a>
               </li>
@@ -71,17 +70,17 @@
               <?php
               if (is_home() || is_front_page()) {
               ?>
-                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h1>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html(bloginfo('name')); ?></a></h1>
               <?php
               } else {
               ?>
-                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></h1>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html(bloginfo('name')); ?></a></h1>
               <?php
               }
 
-              $description = get_bloginfo('description');
+              $description = esc_html(get_bloginfo('description'));
               if ($description || is_customize_preview()) { ?>
-                <p class="site-description"> <?php echo $description; ?></p>
+                <p class="site-description"> <?php echo esc_html($description); ?></p>
 
               <?php
               }

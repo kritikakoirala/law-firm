@@ -20,7 +20,8 @@ function law_firm_about_page_sections($wp_customize)
             'priority' => 20,
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
-            'transport' => 'refresh'
+            'transport' => 'refresh',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
         )
     );
 
@@ -41,7 +42,8 @@ function law_firm_about_page_sections($wp_customize)
             'priority' => 30,
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
-            'transport' => 'refresh'
+            'transport' => 'refresh',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
         )
     );
 

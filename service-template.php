@@ -27,7 +27,7 @@ get_header();
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="banner-content text-center">
-                    <h3>Areas of Practice</h3>
+                    <h3> <?php esc_html_e('Areas of Practice', 'kriti_law_firm'); ?></h3>
                     <a class="service_banner_arrow" href="#area_section"><i class="fa fa-angle-down"></i></a>
                 </div>
             </div>
@@ -40,8 +40,8 @@ get_header();
         <div class="row">
 
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h5 class="text-center mb-4"><?php echo $section_title ?></h5>
-                <p><?php echo $section_description; ?></p>
+                <h5 class="text-center mb-4"><?php echo esc_html($section_title); ?></h5>
+                <p><?php echo esc_html($section_description); ?></p>
                 <div class="area_section text-center">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 text-center align-self-stretch">
@@ -50,7 +50,7 @@ get_header();
 
                             </div>
                             <div class="service-body">
-                                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_1_link); ?>"><?php echo $area_1; ?></a></h6>
+                                <h6 class="heading text-center"><a href="<?php echo esc_url($practice_area_1_link); ?>"><?php echo esc_html($area_1); ?></a></h6>
 
                             </div>
                         </div>
@@ -61,7 +61,7 @@ get_header();
 
                             </div>
                             <div class="service-body">
-                                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_2_link); ?>"><?php echo $area_2; ?></a></h6>
+                                <h6 class="heading text-center"><a href="<?php echo esc_url($practice_area_2_link); ?>"><?php esc_html($area_2); ?></a></h6>
 
                             </div>
                         </div>
@@ -72,7 +72,7 @@ get_header();
 
                             </div>
                             <div class="service-body">
-                                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_3_link); ?>"><?php echo $area_3; ?></a></h6>
+                                <h6 class="heading text-center"><a href="<?php echo esc_url($practice_area_3_link); ?>"><?php esc_html($area_3); ?></a></h6>
 
                             </div>
                         </div>
@@ -83,7 +83,7 @@ get_header();
 
                             </div>
                             <div class="service-body">
-                                <h6 class="heading text-center"><a href="<?php echo esc_url_raw($practice_area_4_link); ?>"><?php echo $area_4; ?></a></h6>
+                                <h6 class="heading text-center"><a href="<?php echo esc_url($practice_area_4_link); ?>"><?php esc_html($area_4); ?></a></h6>
 
                             </div>
                         </div>

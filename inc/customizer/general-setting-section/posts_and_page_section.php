@@ -8,7 +8,7 @@
 function law_firm_posts_and_pages($wp_customize)
 {
 
-    /*=================== About section ====================*/
+    /*=================== Posts and page section ====================*/
     $wp_customize->add_section(
         'posts_and_pages',
         array(
@@ -19,7 +19,7 @@ function law_firm_posts_and_pages($wp_customize)
         )
     );
 
-    // About section title
+    // Show related posts checkbox
     $wp_customize->add_setting(
         'show_related_posts',
         array(
@@ -27,7 +27,8 @@ function law_firm_posts_and_pages($wp_customize)
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
             'transport' => 'refresh',
-            'default' => 0
+            'default' => 0,
+            'sanitize_callback' => 'kriti_law_firm_sanitize_checkbox'
         )
     );
 
@@ -41,48 +42,26 @@ function law_firm_posts_and_pages($wp_customize)
         )
     );
 
-    // about section read more button
+    // show related posts title
 
     $wp_customize->add_setting(
-        'read_more_button',
+        'show_related_post_title',
         array(
             'priority' => 20,
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
             'transport' => 'refresh',
-            'default' => __('Know Us', 'kriti_law_firm')
+            'default' => __('Related Posts', 'kriti_law_firm'),
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
         )
     );
 
     $wp_customize->add_control(
-        'read_more_button',
+        'show_related_post_title',
         array(
             'label' => __('Read more Button', 'kriti_law_firm'),
-            'section' => 'about_section',
-            'settings' => 'read_more_button',
-            'type' => 'text'
-        )
-    );
-
-    // read more button link
-    $wp_customize->add_setting(
-        'read_more_button_link',
-        array(
-            'priority' => 30,
-            'type' => 'theme_mod',
-            'capability' => 'edit_theme_options',
-            'transport' => 'refresh',
-            'default' => __('#', 'kriti_law_firm'),
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-
-    $wp_customize->add_control(
-        'read_more_link',
-        array(
-            'label' => __('Read More Button Link', 'kriti_law_firm'),
-            'section' => 'about_section',
-            'settings' => 'read_more_button_link',
+            'section' => 'posts_and_pages',
+            'settings' => 'show_related_post_title',
             'type' => 'text'
         )
     );

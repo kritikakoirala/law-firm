@@ -28,11 +28,11 @@ $copyright_message = get_theme_mod('copyright_message');
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="widgets widget_1">
 					<div class="contact_info">
-						<h5><?php echo $contact_widget_title; ?></h5>
+						<h5><?php echo esc_html($contact_widget_title); ?></h5>
 						<ul class="list-group">
-							<li class="list-group-item"><i class="fa fa-phone"></i> <?php echo $contact_number; ?></li>
-							<li class="list-group-item"><i class="fa fa-envelope"></i> <?php echo $email; ?></li>
-							<li class="list-group-item"><?php echo $address; ?></li>
+							<li class="list-group-item"><i class="fa fa-phone"></i> <?php echo esc_html($contact_number); ?></li>
+							<li class="list-group-item"><i class="fa fa-envelope"></i> <?php echo esc_html($email); ?></li>
+							<li class="list-group-item"><?php echo esc_html($address); ?></li>
 						</ul>
 					</div>
 				</div>
@@ -41,7 +41,7 @@ $copyright_message = get_theme_mod('copyright_message');
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="widget widget_2">
 					<div class="footer_menu">
-						<h5>Recent Posts</h5>
+						<h5><?php esc_html_e('Recent Posts', 'kriti_law_firm'); ?></h5>
 						<!-- main-nav begins -->
 						<nav class="navbar-ul">
 							<!-- Links -->
@@ -65,10 +65,10 @@ $copyright_message = get_theme_mod('copyright_message');
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="widgets widget_3">
 					<div class="office_hours">
-						<h5><?php echo $opening_hours_title; ?></h5>
+						<h5><?php echo esc_html($opening_hours_title); ?></h5>
 						<ul class="list-group">
-							<li class="list-group-item"><i class="fa fa-clock-o"></i> <?php echo $opening_time; ?></li>
-							<li class="list-group-item"><i class="fa fa-calendar-times-o"></i> <?php echo $opening_day; ?></li>
+							<li class="list-group-item"><i class="fa fa-clock-o"></i> <?php echo esc_html($opening_time); ?></li>
+							<li class="list-group-item"><i class="fa fa-calendar-times-o"></i> <?php echo esc_html($opening_day); ?></li>
 
 						</ul>
 					</div>
@@ -82,7 +82,7 @@ $copyright_message = get_theme_mod('copyright_message');
 				<?php
 				if ($copyright_message) {
 				?>
-					<p class="footer-bottom text-center"><?php echo $copyright_message; ?></p>
+					<p class="footer-bottom text-center"><?php echo esc_html($copyright_message); ?></p>
 				<?php
 				} else {
 				?>

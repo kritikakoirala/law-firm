@@ -10,7 +10,7 @@
 function show_related_posts()
 {
   $show_related_posts = get_theme_mod('show_related_posts');
-
+  $show_related_posts_title = get_theme_mod('show_related_post_title');
 
   global $post;
   $categories = get_the_category($post->ID);
@@ -29,10 +29,12 @@ function show_related_posts()
     $query = new WP_Query($args);
     if ($query->have_posts()) : ?>
       <div class="related_posts">
+        <h5><?php echo esc_html($show_related_posts_title); ?></h5>
         <div class="container">
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="related-content">
+
                 <?php
                 while ($query->have_posts()) :
                   $query->the_post();
@@ -48,7 +50,7 @@ function show_related_posts()
                         <div class="relatedthumb"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
 
                           <div class="relatedcontent">
-                            <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                            <h6><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h6>
                             <?php the_time('M j, Y') ?>
                           </div>
 

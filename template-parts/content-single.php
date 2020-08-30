@@ -6,18 +6,24 @@
     ?>
 
         <p class="posted_details">
-            Posted in<span> <?php echo get_the_date(); ?> </span> by <?php the_author_posts_link(); ?>
+            <b><?php esc_html_e('Posted in', 'kriti_law_firm'); ?></b> <span> <?php echo get_the_date(); ?> </span><?php esc_html_e('by', 'kriti_law_firm'); ?> <?php the_author_posts_link(); ?>
         </p>
     <?php
     }
     ?>
-    <p class="cat"><span>Categories: </span> <?php the_category(', '); ?></p>
+    <p class="cat"><?php the_category(', '); ?></p>
     <p class="content"><?php the_content(); ?></p>
 
     <?php
 
     if (has_post_thumbnail())
-        the_post_thumbnail('thumbnail'); ?>
+        the_post_thumbnail('thumbnail');
 
+
+    ?>
+
+    <!-- <div class="post-comments">
+        <a href="<?php comments_link(); ?>"><?php comments_number(0, 1, '%'); ?></a>
+    </div> -->
 
 </article>

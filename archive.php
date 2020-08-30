@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 <!-- blog posts section begins -->
-<div class="latest_posts mt-4 pt-4">
+<div class="latest_posts mt-4">
     <div class="container">
         <div class="row">
 
@@ -23,7 +23,7 @@ get_header(); ?>
                     endwhile;
                 else :
                     ?>
-                    <p>There are no posts yet.</p>
+                    <p><?php get_template_part('template-parts/content', 'none') ?></p>
 
                 <?php
                 endif;

@@ -27,7 +27,8 @@ function law_firm_areas_of_practice_section($wp_customize)
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
-      'default' => __('Our range of Practice Areas', 'kriti_law_firm')
+      'default' => __('Our range of Practice Areas', 'kriti_law_firm'),
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -48,7 +49,8 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 30,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
 
     )
   );
@@ -69,7 +71,8 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 35,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'kriti_law_firm_sanitize_file'
 
     )
   );
@@ -94,7 +97,8 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 40,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -112,7 +116,7 @@ function law_firm_areas_of_practice_section($wp_customize)
     'practice_area_1_link',
     array(
       'default' => '#',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'esc_url_raw'
     )
   );
 
@@ -133,7 +137,7 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 50,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -150,7 +154,7 @@ function law_firm_areas_of_practice_section($wp_customize)
     'practice_area_2_link',
     array(
       'default' => '#',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'esc_url_raw'
     )
   );
 
@@ -171,7 +175,7 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 60,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -189,7 +193,7 @@ function law_firm_areas_of_practice_section($wp_customize)
     'practice_area_3_link',
     array(
       'default' => '#',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'esc_url_raw'
     )
   );
 
@@ -209,7 +213,8 @@ function law_firm_areas_of_practice_section($wp_customize)
       'priority' => 70,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -226,7 +231,7 @@ function law_firm_areas_of_practice_section($wp_customize)
     'practice_area_4_link',
     array(
       'default' => '#',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'esc_url_raw'
     )
   );
 

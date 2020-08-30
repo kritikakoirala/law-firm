@@ -27,7 +27,8 @@ function law_firm_contact_section($wp_customize)
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
-      'default' => __('Contact Details', 'kriti_law_firm')
+      'default' => __('Contact Details', 'kriti_law_firm'),
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -48,7 +49,8 @@ function law_firm_contact_section($wp_customize)
       'priority' => 30,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'absint'
     )
   );
 
@@ -58,7 +60,7 @@ function law_firm_contact_section($wp_customize)
       'label' => __('Contact Number', 'kriti_law_firm'),
       'settings' => 'footer_phone_number',
       'section' => 'contactDetail_footer_widget',
-      'type' => 'textarea'
+      'type' => 'number'
     )
   );
 
@@ -69,7 +71,8 @@ function law_firm_contact_section($wp_customize)
       'priority' => 40,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_email'
 
     )
   );
@@ -80,7 +83,7 @@ function law_firm_contact_section($wp_customize)
       'label' => __('Contact Email', 'kriti_law_firm'),
       'settings' => 'footer_email',
       'section' => 'contactDetail_footer_widget',
-      'type' => 'text'
+      'type' => 'email'
     )
   );
 
@@ -91,7 +94,8 @@ function law_firm_contact_section($wp_customize)
       'priority' => 50,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
 
     )
   );

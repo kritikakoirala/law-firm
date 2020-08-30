@@ -28,7 +28,8 @@ function law_firm_blog_section($wp_customize)
 			'type' => 'theme_mod',
 			'capability' => 'edit_theme_options',
 			'transport' => 'refresh',
-			'default' => __('Latest Posts', 'kriti_law_firm')
+			'default' => __('Latest Posts', 'kriti_law_firm'),
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		)
 	);
 
@@ -51,7 +52,8 @@ function law_firm_blog_section($wp_customize)
 			'type' => 'theme_mod',
 			'capability' => 'edit_theme_options',
 			'transport' => 'refresh',
-			'default' => __('Read More', 'kriti_law_firm')
+			'default' => __('Read More', 'kriti_law_firm'),
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		)
 	);
 

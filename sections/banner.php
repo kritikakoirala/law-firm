@@ -17,25 +17,12 @@ $banner_button_link = get_theme_mod('banner_link');
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="hero-contents text-center">
-                    <h2><?php echo esc_html_e($banner_title); ?></h2>
-                    <p><?php echo  esc_html_e($banner_desc); ?></p>
-                    <a href="<?php echo esc_url($banner_button_link) ?>" class="btn"><?php echo  esc_html_e($banner_button); ?></a>
+                    <h2><?php echo esc_html($banner_title); ?></h2>
+                    <p><?php echo esc_html($banner_desc); ?></p>
+                    <a href="<?php echo esc_url($banner_button_link) ?>" class="btn"><?php echo esc_html($banner_button); ?></a>
                 </div>
             </div>
-            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="hero-content">
-                    <h2><?php echo esc_html_e($banner_title); ?></h2>
-                    <p><?php echo  esc_html_e($banner_desc); ?></p>
-                    <a href="<?php echo esc_url($banner_button_link) ?>" class="btn"><?php echo  esc_html_e($banner_button); ?></a>
-                </div>
 
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="banner-image">
-                    <img src="<?php echo $banner_image; ?>" alt="">
-                </div>
-
-            </div> -->
         </div>
     </div>
 </section>

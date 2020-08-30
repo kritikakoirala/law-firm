@@ -2,7 +2,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <h4 class="post_title mt-4"><?php the_title(); ?></h4>
     <p class="posted_details">
-        <b>Posted in</b> <span> <?php echo get_the_date(); ?> </span> by <?php the_author_posts_link(); ?>
+        <b><?php esc_html_e('Posted in', 'kriti_law_firm'); ?></b> <span> <?php echo get_the_date(); ?> </span><?php esc_html_e('by', 'kriti_law_firm'); ?> <?php the_author_posts_link(); ?>
     </p>
     <?php
 

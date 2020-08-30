@@ -25,7 +25,8 @@ function law_firm_footer_bottom_section($wp_customize)
             'priority' => 40,
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
-            'transport' => 'refresh'
+            'transport' => 'refresh',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
 
         )
     );

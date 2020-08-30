@@ -27,7 +27,8 @@ function law_firm_header_top($wp_customize)
     array(
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'absint'
     )
   );
 
@@ -37,7 +38,8 @@ function law_firm_header_top($wp_customize)
       'label' => __('Phone Number', 'kriti_law_firm'),
       'settings' => 'header_phone',
       'priority' => 10,
-      'section' => 'top_header'
+      'section' => 'top_header',
+      'type' => 'number'
     )
   );
 
@@ -48,7 +50,8 @@ function law_firm_header_top($wp_customize)
     array(
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_email'
     )
   );
 
@@ -58,7 +61,8 @@ function law_firm_header_top($wp_customize)
       'label' => __('Email', 'kriti_law_firm'),
       'settings' => 'header_email',
       'priority' => 20,
-      'section' => 'top_header'
+      'section' => 'top_header',
+      'type' => 'email'
     )
   );
 }

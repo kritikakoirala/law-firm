@@ -49,7 +49,8 @@ function law_firm_banner($wp_customize)
       'priority' => 20,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -70,7 +71,8 @@ function law_firm_banner($wp_customize)
       'priority' => 30,
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
-      'transport' => 'refresh'
+      'transport' => 'refresh',
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -92,7 +94,8 @@ function law_firm_banner($wp_customize)
       'type' => 'theme_mod',
       'capability' => 'edit_theme_options',
       'transport' => 'refresh',
-      'default' => __('consult us', 'kriti_law_firm')
+      'default' => __('consult us', 'kriti_law_firm'),
+      'sanitize_callback' => 'wp_filter_nohtml_kses'
     )
   );
 
@@ -111,7 +114,7 @@ function law_firm_banner($wp_customize)
     'banner_link',
     array(
       'default' => '#',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'esc_url_raw'
     )
   );
 
@@ -120,7 +123,7 @@ function law_firm_banner($wp_customize)
     array(
       'label' => __('Banner Link', 'kriti_law_firm'),
       'section' => 'banner_section',
-      'type' => 'text'
+      'type' => 'url'
     )
   );
 }

@@ -20,8 +20,8 @@ $banner_button = get_theme_mod('about_banner_button');
 
           <!-- add the header image -->
 
-          <h2><?php echo $banner_title; ?></h2>
-          <a href="#about_us" class="btn mt-4"><?php echo $banner_button; ?>
+          <h2><?php echo esc_html($banner_title); ?></h2>
+          <a href="#about_us" class="btn mt-4"><?php echo esc_html($banner_button); ?>
             <i class="fa fa-arrow-down"></i>
           </a>
 

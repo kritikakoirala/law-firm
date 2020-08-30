@@ -12,8 +12,8 @@ $title_text = get_theme_mod('blog_section_title');
 $read_more_button = get_theme_mod('read_more_posts');
 $read_more_button_link = get_theme_mod('read_more_posts_link');
 ?>
-<div class="latest_posts" id="homepage_blog">
-  <h3 class="pt-4 text-center section_heading"><?php echo $title_text; ?></h3>
+<div id="homepage_blog">
+  <h3 class="pt-4 text-center section_heading"><?php echo esc_html($title_text); ?></h3>
   <div class="container">
     <div class="row">
 
@@ -41,7 +41,7 @@ $read_more_button_link = get_theme_mod('read_more_posts_link');
               <div class="card-footer">
 
 
-                <a href="<?php esc_url(the_permalink()); ?>" class="btn"><?php echo "$read_more_button"; ?></a>
+                <a href="<?php the_permalink(); ?>" class="btn"><?php echo esc_html($read_more_button); ?></a>
               </div>
             </div>
           </div>

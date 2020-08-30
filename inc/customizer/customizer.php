@@ -5,6 +5,9 @@
  */
 
 
+/* ================== Include the sanitization page ==================== */
+require get_template_directory() . '/inc/customizer/sanitization.php';
+
 /* ================== Include all the panels first ==================== */
 
 require get_template_directory() . '/inc/customizer/panels/footer.php';

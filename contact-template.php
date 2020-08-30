@@ -22,18 +22,24 @@ get_header();
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mt-4 mb-4 text-center"><?php echo $section_title; ?></h5>
-                        <p class="mb-4"><?php echo $secton_description; ?></p>
+                        <h5 class="mt-4 mb-4 text-center"><?php echo esc_html($section_title); ?></h5>
+                        <p class="mb-4"><?php echo esc_html($secton_description); ?></p>
                     </div>
                     <div class="card-body">
-                        <p> <span>Phone:</span> <?php echo $phone_number; ?></p>
+                        <p> <span><?php esc_html_e('Phone Number', 'kriti_law_firm'); ?></span> <?php echo esc_html($phone_number); ?></p>
 
-                        <p><span> Email:</span> <?php echo $email; ?></p>
+                        <p><span><?php esc_html_e(' Email', 'kriti_law_firm'); ?>:</span> <?php echo esc_html($email); ?></p>
 
-                        <p><span>Address:</span> <?php echo $address; ?></p>
+                        <p><span><?php esc_html_e('Address', 'kriti_law_firm'); ?>:</span> <?php echo esc_html($address); ?></p>
                     </div>
                     <div class="card-footer">
-                        <p>You can also send us a message. <br> Please fill out the form below to mail us.</p>
+                        <?php
+
+                        printf(
+                            '<p>' . __('You can also send us a message. <br> Please fill out the form below to mail us.', 'kriti_law_firm') . '</p>'
+                        );
+                        ?>
+
                     </div>
                 </div>
 
@@ -50,10 +56,14 @@ get_header();
 
 <div class="contact_form">
     <div class="container">
+        <?php
+        printf(
+            '<h4>' . __(' Send us a message', 'kriti_law_firm') . '</h4>'
+        );
 
-        <h4>Send us a message</h4>
+        ?>
 
-        <p class=" message pb-4">Leave us a message if you have any queries. We will try our best to reply as soon as possisble.</p>
+        <p class=" message pb-4"><?php _e('Leave us a message if you have any queries. We will try our best to reply as soon as possisble.', 'kriti_law_firm'); ?></p>
         <form action="" method="post">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12">

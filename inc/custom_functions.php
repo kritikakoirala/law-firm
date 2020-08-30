@@ -16,7 +16,7 @@ function custom_functions()
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 510px;
+            height: 530px;
             position: relative;
         }
 
@@ -28,8 +28,9 @@ function custom_functions()
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 400px;
+            height: 410px;
             position: relative;
+
         }
 
         .service-banner {
@@ -40,8 +41,9 @@ function custom_functions()
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 400px;
+            height: 410px;
             position: relative;
+
         }
 
         .team-banner {
@@ -52,8 +54,9 @@ function custom_functions()
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 400px;
+            height: 410;
             position: relative;
+
         }
     </style>
 <?php

@@ -27,7 +27,8 @@ function law_firm_opening_hours_section($wp_customize)
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
             'transport' => 'refresh',
-            'default' => __('Opening Hours', 'kriti_law_firm')
+            'default' => __('Opening Hours', 'kriti_law_firm'),
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
 
         )
     );
@@ -49,7 +50,8 @@ function law_firm_opening_hours_section($wp_customize)
             'priority' => 40,
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options',
-            'transport' => 'refresh'
+            'transport' => 'refresh',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
 
         )
     );
